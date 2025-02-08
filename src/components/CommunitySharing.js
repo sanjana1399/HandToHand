@@ -1,16 +1,15 @@
 import React from "react";
+import "./CommunitySharing.css";
 
 const CommunitySharing = () => {
   return (
-    <div className="bg-gradient-to-r from-green-400 to-green-700 text-white font-sans min-h-screen flex flex-col">
-      <header className="py-8 text-center text-5xl font-extrabold shadow-md">
+    <div className="container">
+      <header className="header">
         🤝 Hand to Hand - Community Sharing
       </header>
-      <main className="max-w-7xl mx-auto p-10 bg-white shadow-2xl mt-10 rounded-2xl text-gray-900">
-        <h2 className="text-4xl font-bold mb-8 text-center text-green-800">
-          Making a Difference, One Share at a Time
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <main className="main">
+        <h2 className="main-title">It's the small things that matter</h2>
+        <div className="grid-container">
           <Section 
             title="🌍 Community Sharing" 
             description="Connecting people to share resources, skills, and kindness." 
@@ -38,7 +37,7 @@ const CommunitySharing = () => {
           />
         </div>
       </main>
-      <footer className="text-center py-6 mt-10 text-gray-100 bg-green-800 text-lg font-medium shadow-lg">
+      <footer className="footer">
         &copy; 2025 Hand to Hand | Building a Stronger Community Together 💚
       </footer>
     </div>
@@ -47,15 +46,15 @@ const CommunitySharing = () => {
 
 const Section = ({ title, description, items }) => {
   return (
-    <section className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-      <h3 className="text-3xl font-bold mb-4 text-green-700">{title}</h3>
-      <p className="mb-4 text-gray-700 text-lg font-medium">{description}</p>
-      <ul className="list-disc pl-6 text-gray-800 text-lg space-y-2">
+    <div className="card">
+      <h3 className="card-title">{title}</h3>
+      <p className="card-description">{description}</p>
+      <ul className="card-list">
         {items.map((item, index) => (
-          <li key={index} className="mb-2">{item}</li>
+          <li key={index} className="card-list-item">{item}</li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 };
 
