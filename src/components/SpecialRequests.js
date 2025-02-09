@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // src/components/SpecialRequests.js
+=======
+>>>>>>> b480771 (Your commit message describing the changes)
 import React, { useState } from "react";
 import './SpecialRequests.css';
 
@@ -27,6 +30,11 @@ const SpecialRequests = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
+=======
+    console.log("Submitting form data:", formData); // Log the form data for debugging
+
+>>>>>>> b480771 (Your commit message describing the changes)
     try {
       const response = await fetch("http://localhost:5000/api/special-requests", {
         method: "POST",
@@ -41,6 +49,10 @@ const SpecialRequests = () => {
       }
 
       const data = await response.json();
+<<<<<<< HEAD
+=======
+      console.log("Response from backend:", data); // Log the response from the server
+>>>>>>> b480771 (Your commit message describing the changes)
       setResponse(data);
       setError(null); // Clear any previous errors
     } catch (error) {
@@ -54,6 +66,12 @@ const SpecialRequests = () => {
       <h2>📢 Special Requests</h2>
       <p>Urgent help requests from the community.</p>
 
+<<<<<<< HEAD
+=======
+      {/* Debugging content */}
+      <p>Test Content: Page Loaded</p>
+
+>>>>>>> b480771 (Your commit message describing the changes)
       {/* Form */}
       <form onSubmit={handleSubmit}>
         {["transport", "care", "nanny"].map((field) => (
