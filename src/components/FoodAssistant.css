@@ -1,4 +1,4 @@
-/* Christmas Donation Form Styling */
+
 .donation-container {
   padding: 20px;
   background: #fdfbfb;
@@ -66,4 +66,69 @@ button {
 
 button:hover {
   background: #b71c1c;
+}
+
+/* Donation Table Styling */
+.donation-table {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.donation-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.donation-table th,
+.donation-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.donation-table th {
+  background-color: #d32f2f;
+  color: white;
+  font-weight: bold;
+}
+
+.donation-table td {
+  background-color: #f9f9f9;
+}
+
+.donation-table tbody tr:hover {
+  background-color: #ffefef;
+}
+
+.donation-table td,
+.donation-table th {
+  border: 2px solid #d32f2f;
+  border-radius: 8px;
+}
+
+.donation-table .message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #d32f2f;
+}
+
+/* Urging Message Section */
+.urgency-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #355e3b;
+  background: #fffaeb;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 800px;
+}
+
+.urgency-message p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 16px;
 }

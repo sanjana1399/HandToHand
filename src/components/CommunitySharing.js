@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./CommunitySharing.css";
-//import './SpecialRequests.css';
+
 
 const CommunitySharing = () => {
   const navigate = useNavigate();
