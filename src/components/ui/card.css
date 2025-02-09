@@ -1,0 +1,22 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin: 10px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card.clickable {
+  cursor: pointer;
+}
+
+.card.clickable:hover {
+  transform: scale(1.02);
+}
+
+.card-content {
+  padding: 8px;
+}
+
