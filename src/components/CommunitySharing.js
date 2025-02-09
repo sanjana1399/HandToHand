@@ -1,19 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./CommunitySharing.css";
+//import './SpecialRequests.css';
 
 const CommunitySharing = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container">
-      <header className="header">
-        🤝 Hand to Hand - Community Sharing
-      </header>
+      <header className="header">🤝 Hand to Hand - Community Sharing</header>
       <main className="main">
         <h2 className="main-title">It's the small things that matter</h2>
         <div className="grid-container">
           <Section 
             title="🌍 Community Sharing" 
             description="Connecting people to share resources, skills, and kindness." 
-            items={["♻️ Resource Exchange & Recycling", "📍 Accountability & Drop Locations", "🆘 Help Center", "🤝 Volunteer & Service Center"]} 
+            items={["♻ Resource Exchange & Recycling", "📍 Accountability & Drop Locations", "🆘 Help Center", "🤝 Volunteer & Service Center"]} 
           />
           <Section 
             title="🍲 Food & Assistance" 
@@ -23,12 +25,14 @@ const CommunitySharing = () => {
           <Section 
             title="🔄 Ongoing Initiatives" 
             description="Helping hands available at all times." 
-            items={["🙋‍♂️ Volunteer Requests", "🚑 Emergency Support (Hotline & Care)", "👴 Support for Seniors & Families"]} 
+            items={["🙋‍♂ Volunteer Submissions", "🚑 Emergency Support (Hotline & Care)", "👴 Support for Seniors & Families"]} 
+            onClick={() => navigate("/ongoing-initiatives")}
           />
           <Section 
             title="📢 Special Requests" 
             description="Urgent help requests from the community." 
             items={["🚗 Transport for Emergencies", "👶 Child & Elderly Care", "👩‍👦 Nanny & Caregiving Services"]} 
+            onClick={() => navigate("/special-requests")}
           />
           <Section 
             title="💡 Awareness & Accessibility" 
@@ -44,9 +48,9 @@ const CommunitySharing = () => {
   );
 };
 
-const Section = ({ title, description, items }) => {
+const Section = ({ title, description, items, onClick }) => {
   return (
-    <div className="card">
+    <div className="card" onClick={onClick} style={{ cursor: onClick ? "pointer" : "default" }}>
       <h3 className="card-title">{title}</h3>
       <p className="card-description">{description}</p>
       <ul className="card-list">
